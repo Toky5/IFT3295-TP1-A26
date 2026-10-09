@@ -1,0 +1,30 @@
+% Necessite \usepackage{graphicx} (pour \resizebox)
+\begin{table}[h]
+\centering
+\caption{Matrice des scores de chevauchement (ligne $R_i$, colonne $R_j$, seuil non applique)}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{c|rrrrrrrrrrrrrrrrrrrr}
+$R_i \backslash R_j$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 \\
+\hline
+\textbf{1} & 0 & 8 & 8 & 0 & 4 & 12 & 12 & 16 & 4 & \textbf{804} & 20 & 4 & 0 & 4 & \textbf{396} & 4 & 20 & \textbf{652} & 12 & \textbf{608} \\
+\textbf{2} & 4 & 0 & 8 & 12 & 44 & 8 & 4 & \textbf{416} & 8 & 12 & \textbf{424} & 16 & 0 & \textbf{1060} & 12 & 12 & 12 & 8 & 4 & 0 \\
+\textbf{3} & \textbf{396} & 12 & 0 & 24 & \textbf{1016} & 16 & 48 & 0 & 36 & \textbf{128} & 4 & 20 & 40 & 8 & 20 & 20 & 16 & 8 & 8 & 8 \\
+\textbf{4} & 28 & 8 & 28 & 0 & 12 & \textbf{640} & \textbf{1024} & 16 & \textbf{1068} & 12 & 12 & \textbf{220} & 16 & 24 & 12 & \textbf{656} & \textbf{152} & 16 & 8 & 16 \\
+\textbf{5} & \textbf{500} & 4 & \textbf{696} & 28 & 0 & 24 & 52 & 8 & 52 & \textbf{208} & 16 & 20 & 36 & 4 & 8 & 24 & 36 & 64 & 4 & 12 \\
+\textbf{6} & 52 & 4 & 4 & 16 & 0 & 0 & 4 & 4 & 12 & 28 & 4 & 16 & 4 & 0 & 28 & 8 & \textbf{672} & 16 & 12 & 20 \\
+\textbf{7} & 32 & 12 & 32 & \textbf{648} & 16 & \textbf{720} & 0 & 4 & \textbf{772} & 12 & 12 & 24 & 24 & 24 & 24 & \textbf{176} & \textbf{232} & 12 & 4 & 0 \\
+\textbf{8} & 8 & 12 & \textbf{644} & 4 & \textbf{540} & 16 & 8 & 0 & 8 & 4 & \textbf{944} & 12 & 4 & 12 & 0 & 4 & 8 & 36 & 4 & 16 \\
+\textbf{9} & 36 & 12 & 20 & \textbf{956} & 16 & \textbf{668} & \textbf{1044} & 4 & 0 & 8 & 4 & 64 & 12 & 24 & 20 & \textbf{492} & \textbf{196} & 8 & 4 & 12 \\
+\textbf{10} & 4 & 0 & 0 & 8 & 32 & 8 & 8 & 24 & 12 & 0 & 32 & 4 & 12 & 12 & \textbf{640} & 4 & 8 & \textbf{904} & \textbf{184} & \textbf{868} \\
+\textbf{11} & 20 & 20 & \textbf{620} & 4 & \textbf{524} & 12 & 12 & \textbf{1072} & 4 & 12 & 0 & 24 & 28 & 24 & 8 & 8 & 16 & 20 & 12 & 12 \\
+\textbf{12} & 28 & 28 & 48 & \textbf{900} & 16 & \textbf{460} & \textbf{820} & 0 & \textbf{856} & 4 & 16 & 0 & 28 & 24 & 16 & \textbf{996} & 20 & 16 & 8 & 4 \\
+\textbf{13} & 68 & 32 & 32 & \textbf{744} & 24 & \textbf{272} & \textbf{656} & 0 & \textbf{692} & 16 & 8 & \textbf{860} & 0 & 36 & 16 & \textbf{848} & 32 & 24 & 4 & 28 \\
+\textbf{14} & 16 & \textbf{756} & 12 & 12 & 52 & 20 & 8 & \textbf{452} & 12 & 16 & \textbf{492} & 16 & 8 & 0 & 4 & 12 & 20 & 16 & 8 & 16 \\
+\textbf{15} & 20 & 8 & 28 & 12 & 16 & 12 & 16 & 12 & 8 & 4 & 12 & \textbf{80} & \textbf{260} & 28 & 0 & 28 & 20 & 24 & \textbf{632} & 24 \\
+\textbf{16} & 20 & 16 & 24 & \textbf{1032} & 16 & \textbf{552} & \textbf{944} & 12 & \textbf{988} & 8 & 20 & \textbf{692} & 8 & 20 & 12 & 0 & \textbf{80} & 12 & 8 & 8 \\
+\textbf{17} & 16 & 4 & 32 & 16 & 16 & 32 & 8 & 12 & 4 & 24 & 20 & 12 & 4 & 28 & 12 & 8 & 0 & 16 & 8 & 20 \\
+\textbf{18} & 16 & 0 & 8 & 12 & 8 & 4 & 4 & 8 & 8 & \textbf{240} & 16 & 8 & 4 & 16 & \textbf{808} & 8 & 4 & 0 & \textbf{368} & \textbf{1004} \\
+\textbf{19} & 48 & 20 & 16 & \textbf{388} & 8 & 20 & \textbf{316} & 8 & \textbf{368} & 16 & 20 & \textbf{520} & \textbf{732} & 16 & 24 & \textbf{492} & 20 & 20 & 0 & 4 \\
+\textbf{20} & 8 & 4 & 0 & 4 & 0 & 8 & 4 & 0 & 0 & 0 & 4 & 0 & 64 & 8 & \textbf{908} & 4 & 16 & \textbf{644} & \textbf{428} & 0 \\
+\end{tabular}}
+\end{table}

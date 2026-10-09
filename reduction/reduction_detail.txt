@@ -1,0 +1,64 @@
+ETAPE 1 - Cycles de deux noeuds (on garde l'arete de plus grand score)
+  READS_2 <-> READS_14 : on garde READS_2 -> READS_14 (1060), on enleve READS_14 -> READS_2 (756)
+  READS_11 <-> READS_8 : on garde READS_11 -> READS_8 (1072), on enleve READS_8 -> READS_11 (944)
+  READS_3 <-> READS_5 : on garde READS_3 -> READS_5 (1016), on enleve READS_5 -> READS_3 (696)
+  READS_10 <-> READS_18 : on garde READS_10 -> READS_18 (904), on enleve READS_18 -> READS_10 (240)
+  READS_18 <-> READS_20 : on garde READS_18 -> READS_20 (1004), on enleve READS_20 -> READS_18 (644)
+  READS_12 <-> READS_4 : on garde READS_12 -> READS_4 (900), on enleve READS_4 -> READS_12 (220)
+  READS_12 <-> READS_16 : on garde READS_12 -> READS_16 (996), on enleve READS_16 -> READS_12 (692)
+  READS_16 <-> READS_4 : on garde READS_16 -> READS_4 (1032), on enleve READS_4 -> READS_16 (656)
+  READS_16 <-> READS_7 : on garde READS_16 -> READS_7 (944), on enleve READS_7 -> READS_16 (176)
+  READS_16 <-> READS_9 : on garde READS_16 -> READS_9 (988), on enleve READS_9 -> READS_16 (492)
+  READS_4 <-> READS_7 : on garde READS_4 -> READS_7 (1024), on enleve READS_7 -> READS_4 (648)
+  READS_4 <-> READS_9 : on garde READS_4 -> READS_9 (1068), on enleve READS_9 -> READS_4 (956)
+  READS_9 <-> READS_7 : on garde READS_9 -> READS_7 (1044), on enleve READS_7 -> READS_9 (772)
+
+ETAPE 2 - Aretes transitives (44 aretes enlevees)
+  On enleve u -> v s'il existe un autre chemin de u a v :
+  READS_2 -> READS_11   car   READS_2 -> READS_14 -> READS_11
+  READS_2 -> READS_8   car   READS_2 -> READS_14 -> READS_11 -> READS_8
+  READS_14 -> READS_8   car   READS_14 -> READS_11 -> READS_8
+  READS_11 -> READS_3   car   READS_11 -> READS_8 -> READS_3
+  READS_11 -> READS_5   car   READS_11 -> READS_8 -> READS_3 -> READS_5
+  READS_8 -> READS_5   car   READS_8 -> READS_3 -> READS_5
+  READS_3 -> READS_1   car   READS_3 -> READS_5 -> READS_1
+  READS_3 -> READS_10   car   READS_3 -> READS_5 -> READS_1 -> READS_10
+  READS_5 -> READS_10   car   READS_5 -> READS_1 -> READS_10
+  READS_1 -> READS_18   car   READS_1 -> READS_10 -> READS_18
+  READS_1 -> READS_20   car   READS_1 -> READS_10 -> READS_18 -> READS_20
+  READS_1 -> READS_15   car   READS_1 -> READS_10 -> READS_18 -> READS_20 -> READS_15
+  READS_10 -> READS_20   car   READS_10 -> READS_18 -> READS_20
+  READS_10 -> READS_15   car   READS_10 -> READS_18 -> READS_20 -> READS_15
+  READS_10 -> READS_19   car   READS_10 -> READS_18 -> READS_20 -> READS_15 -> READS_19
+  READS_18 -> READS_15   car   READS_18 -> READS_20 -> READS_15
+  READS_18 -> READS_19   car   READS_18 -> READS_20 -> READS_15 -> READS_19
+  READS_20 -> READS_19   car   READS_20 -> READS_15 -> READS_19
+  READS_15 -> READS_13   car   READS_15 -> READS_19 -> READS_13
+  READS_15 -> READS_12   car   READS_15 -> READS_19 -> READS_13 -> READS_12
+  READS_19 -> READS_12   car   READS_19 -> READS_13 -> READS_12
+  READS_19 -> READS_16   car   READS_19 -> READS_13 -> READS_12 -> READS_16
+  READS_19 -> READS_4   car   READS_19 -> READS_13 -> READS_12 -> READS_16 -> READS_4
+  READS_19 -> READS_9   car   READS_19 -> READS_13 -> READS_12 -> READS_16 -> READS_4 -> READS_9
+  READS_19 -> READS_7   car   READS_19 -> READS_13 -> READS_12 -> READS_16 -> READS_4 -> READS_9 -> READS_7
+  READS_13 -> READS_16   car   READS_13 -> READS_12 -> READS_16
+  READS_13 -> READS_4   car   READS_13 -> READS_12 -> READS_16 -> READS_4
+  READS_13 -> READS_9   car   READS_13 -> READS_12 -> READS_16 -> READS_4 -> READS_9
+  READS_13 -> READS_7   car   READS_13 -> READS_12 -> READS_16 -> READS_4 -> READS_9 -> READS_7
+  READS_13 -> READS_6   car   READS_13 -> READS_12 -> READS_16 -> READS_4 -> READS_9 -> READS_7 -> READS_6
+  READS_12 -> READS_4   car   READS_12 -> READS_16 -> READS_4
+  READS_12 -> READS_9   car   READS_12 -> READS_16 -> READS_4 -> READS_9
+  READS_12 -> READS_7   car   READS_12 -> READS_16 -> READS_4 -> READS_9 -> READS_7
+  READS_12 -> READS_6   car   READS_12 -> READS_16 -> READS_4 -> READS_9 -> READS_7 -> READS_6
+  READS_16 -> READS_9   car   READS_16 -> READS_4 -> READS_9
+  READS_16 -> READS_7   car   READS_16 -> READS_4 -> READS_9 -> READS_7
+  READS_16 -> READS_6   car   READS_16 -> READS_4 -> READS_9 -> READS_7 -> READS_6
+  READS_16 -> READS_17   car   READS_16 -> READS_4 -> READS_9 -> READS_7 -> READS_6 -> READS_17
+  READS_4 -> READS_7   car   READS_4 -> READS_9 -> READS_7
+  READS_4 -> READS_6   car   READS_4 -> READS_9 -> READS_7 -> READS_6
+  READS_4 -> READS_17   car   READS_4 -> READS_9 -> READS_7 -> READS_6 -> READS_17
+  READS_9 -> READS_6   car   READS_9 -> READS_7 -> READS_6
+  READS_9 -> READS_17   car   READS_9 -> READS_7 -> READS_6 -> READS_17
+  READS_7 -> READS_17   car   READS_7 -> READS_6 -> READS_17
+
+RESULTAT - 19 aretes, un seul chemin :
+  READS_2 -> READS_14 -> READS_11 -> READS_8 -> READS_3 -> READS_5 -> READS_1 -> READS_10 -> READS_18 -> READS_20 -> READS_15 -> READS_19 -> READS_13 -> READS_12 -> READS_16 -> READS_4 -> READS_9 -> READS_7 -> READS_6 -> READS_17

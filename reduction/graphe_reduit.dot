@@ -1,0 +1,25 @@
+// Graphe reduit (apres reduction transitive). Etiquette = longueur du chevauchement (nt).
+digraph {
+  graph [rankdir=TB, ranksep=0.35];
+  node [shape=ellipse, fontname="Times", fontsize=12];
+  edge [arrowsize=0.7, fontsize=10];
+  READS_2 -> READS_14 [label=" 281"];
+  READS_14 -> READS_11 [label=" 135"];
+  READS_11 -> READS_8 [label=" 292"];
+  READS_8 -> READS_3 [label=" 169"];
+  READS_3 -> READS_5 [label=" 280"];
+  READS_5 -> READS_1 [label=" 133"];
+  READS_1 -> READS_10 [label=" 225"];
+  READS_10 -> READS_18 [label=" 258"];
+  READS_18 -> READS_20 [label=" 277"];
+  READS_20 -> READS_15 [label=" 243"];
+  READS_15 -> READS_19 [label=" 174"];
+  READS_19 -> READS_13 [label=" 199"];
+  READS_13 -> READS_12 [label=" 247"];
+  READS_12 -> READS_16 [label=" 281"];
+  READS_16 -> READS_4 [label=" 276"];
+  READS_4 -> READS_9 [label=" 293"];
+  READS_9 -> READS_7 [label=" 283"];
+  READS_7 -> READS_6 [label=" 194"];
+  READS_6 -> READS_17 [label=" 174"];
+}

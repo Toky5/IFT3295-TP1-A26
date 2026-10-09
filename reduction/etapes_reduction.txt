@@ -1,0 +1,62 @@
+# Etape 1 : cycles de deux noeuds (on enleve l'arete de plus petit score)
+READS_14->READS_2 (756) enlevee ; READS_2->READS_14 (1060) gardee
+READS_5->READS_3 (696) enlevee ; READS_3->READS_5 (1016) gardee
+READS_7->READS_4 (648) enlevee ; READS_4->READS_7 (1024) gardee
+READS_9->READS_4 (956) enlevee ; READS_4->READS_9 (1068) gardee
+READS_4->READS_12 (220) enlevee ; READS_12->READS_4 (900) gardee
+READS_4->READS_16 (656) enlevee ; READS_16->READS_4 (1032) gardee
+READS_7->READS_9 (772) enlevee ; READS_9->READS_7 (1044) gardee
+READS_7->READS_16 (176) enlevee ; READS_16->READS_7 (944) gardee
+READS_8->READS_11 (944) enlevee ; READS_11->READS_8 (1072) gardee
+READS_9->READS_16 (492) enlevee ; READS_16->READS_9 (988) gardee
+READS_18->READS_10 (240) enlevee ; READS_10->READS_18 (904) gardee
+READS_16->READS_12 (692) enlevee ; READS_12->READS_16 (996) gardee
+READS_20->READS_18 (644) enlevee ; READS_18->READS_20 (1004) gardee
+
+# Etape 2 : aretes transitives enlevees (44) - il existe un autre chemin u -> ... -> v
+READS_1->READS_15 (396) enlevee : chemin READS_1 -> READS_10 -> READS_18 -> READS_20 -> READS_15
+READS_1->READS_18 (652) enlevee : chemin READS_1 -> READS_10 -> READS_18
+READS_1->READS_20 (608) enlevee : chemin READS_1 -> READS_10 -> READS_18 -> READS_20
+READS_2->READS_8 (416) enlevee : chemin READS_2 -> READS_14 -> READS_11 -> READS_8
+READS_2->READS_11 (424) enlevee : chemin READS_2 -> READS_14 -> READS_11
+READS_3->READS_1 (396) enlevee : chemin READS_3 -> READS_5 -> READS_1
+READS_3->READS_10 (128) enlevee : chemin READS_3 -> READS_5 -> READS_1 -> READS_10
+READS_4->READS_6 (640) enlevee : chemin READS_4 -> READS_9 -> READS_7 -> READS_6
+READS_4->READS_7 (1024) enlevee : chemin READS_4 -> READS_9 -> READS_7
+READS_4->READS_17 (152) enlevee : chemin READS_4 -> READS_9 -> READS_7 -> READS_6 -> READS_17
+READS_5->READS_10 (208) enlevee : chemin READS_5 -> READS_1 -> READS_10
+READS_7->READS_17 (232) enlevee : chemin READS_7 -> READS_6 -> READS_17
+READS_8->READS_5 (540) enlevee : chemin READS_8 -> READS_3 -> READS_5
+READS_9->READS_6 (668) enlevee : chemin READS_9 -> READS_7 -> READS_6
+READS_9->READS_17 (196) enlevee : chemin READS_9 -> READS_7 -> READS_6 -> READS_17
+READS_10->READS_15 (640) enlevee : chemin READS_10 -> READS_18 -> READS_20 -> READS_15
+READS_10->READS_19 (184) enlevee : chemin READS_10 -> READS_18 -> READS_20 -> READS_15 -> READS_19
+READS_10->READS_20 (868) enlevee : chemin READS_10 -> READS_18 -> READS_20
+READS_11->READS_3 (620) enlevee : chemin READS_11 -> READS_8 -> READS_3
+READS_11->READS_5 (524) enlevee : chemin READS_11 -> READS_8 -> READS_3 -> READS_5
+READS_12->READS_4 (900) enlevee : chemin READS_12 -> READS_16 -> READS_4
+READS_12->READS_6 (460) enlevee : chemin READS_12 -> READS_16 -> READS_4 -> READS_9 -> READS_7 -> READS_6
+READS_12->READS_7 (820) enlevee : chemin READS_12 -> READS_16 -> READS_4 -> READS_9 -> READS_7
+READS_12->READS_9 (856) enlevee : chemin READS_12 -> READS_16 -> READS_4 -> READS_9
+READS_13->READS_4 (744) enlevee : chemin READS_13 -> READS_12 -> READS_16 -> READS_4
+READS_13->READS_6 (272) enlevee : chemin READS_13 -> READS_12 -> READS_16 -> READS_4 -> READS_9 -> READS_7 -> READS_6
+READS_13->READS_7 (656) enlevee : chemin READS_13 -> READS_12 -> READS_16 -> READS_4 -> READS_9 -> READS_7
+READS_13->READS_9 (692) enlevee : chemin READS_13 -> READS_12 -> READS_16 -> READS_4 -> READS_9
+READS_13->READS_16 (848) enlevee : chemin READS_13 -> READS_12 -> READS_16
+READS_14->READS_8 (452) enlevee : chemin READS_14 -> READS_11 -> READS_8
+READS_15->READS_12 (80) enlevee : chemin READS_15 -> READS_19 -> READS_13 -> READS_12
+READS_15->READS_13 (260) enlevee : chemin READS_15 -> READS_19 -> READS_13
+READS_16->READS_6 (552) enlevee : chemin READS_16 -> READS_4 -> READS_9 -> READS_7 -> READS_6
+READS_16->READS_7 (944) enlevee : chemin READS_16 -> READS_4 -> READS_9 -> READS_7
+READS_16->READS_9 (988) enlevee : chemin READS_16 -> READS_4 -> READS_9
+READS_16->READS_17 (80) enlevee : chemin READS_16 -> READS_4 -> READS_9 -> READS_7 -> READS_6 -> READS_17
+READS_18->READS_15 (808) enlevee : chemin READS_18 -> READS_20 -> READS_15
+READS_18->READS_19 (368) enlevee : chemin READS_18 -> READS_20 -> READS_15 -> READS_19
+READS_19->READS_4 (388) enlevee : chemin READS_19 -> READS_13 -> READS_12 -> READS_16 -> READS_4
+READS_19->READS_7 (316) enlevee : chemin READS_19 -> READS_13 -> READS_12 -> READS_16 -> READS_4 -> READS_9 -> READS_7
+READS_19->READS_9 (368) enlevee : chemin READS_19 -> READS_13 -> READS_12 -> READS_16 -> READS_4 -> READS_9
+READS_19->READS_12 (520) enlevee : chemin READS_19 -> READS_13 -> READS_12
+READS_19->READS_16 (492) enlevee : chemin READS_19 -> READS_13 -> READS_12 -> READS_16
+READS_20->READS_19 (428) enlevee : chemin READS_20 -> READS_15 -> READS_19
+
+Reste : 19 aretes

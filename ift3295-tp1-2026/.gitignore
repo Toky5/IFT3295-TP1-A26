@@ -1,0 +1,31 @@
+# Environnements virtuels
+.venv/
+venv/
+
+# Caches Python
+__pycache__/
+*.pyc
+
+# Cache des outils
+.ruff_cache/
+.mypy_cache/
+
+# Fichiers de sortie generes par run.sh (tp1/squelette)
+overlap_matrix.csv
+graphe.dot
+fragment.fasta
+
+# Fichiers LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+.DS_Store
+*.zip
+
+# Corriges prives (a ne jamais distribuer aux etudiants)
+tp1/solution/
+tp1/analyse/
